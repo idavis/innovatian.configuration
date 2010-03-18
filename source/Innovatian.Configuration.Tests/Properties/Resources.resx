@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EmptySectionnameTest0" xml:space="preserve">
+    <value>[]</value>
+  </data>
+  <data name="EmptySectionnameTest1" xml:space="preserve">
+    <value>[           ]</value>
+  </data>
+  <data name="EmptySectionnameTest2" xml:space="preserve">
+    <value>[kasdk]
+[]</value>
+  </data>
+  <data name="IniTestCases" xml:space="preserve">
+    <value>; last modified 1 April 2001 by John Doe
+[owner]
+name=John Doe
+organization=Acme Products
+ 
+[database]
+server=192.0.2.42     ; use IP address in case network name resolution is not working
+port=143
+file = "acme payroll.dat"
+
+[Empty]
+=MyEmptyKey
+MyEmptyValue=
+=
+
+[Completely Empty Section]
+[  NonEmptyAfterCompletelyEmpty   ]
+; adding = after comment;=
+   mykey    =  myval  akdk     ;
+multi= myvalue=do</value>
+  </data>
+  <data name="MediumTrustConfig" xml:space="preserve">
+    <value>                &lt;PolicyLevel version="1"&gt;
+                    &lt;SecurityClasses&gt;
+                        &lt;SecurityClass Name="AllMembershipCondition" Description="System.Security.Policy.AllMembershipCondition, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/&gt;
+                        &lt;SecurityClass Name="AspNetHostingPermission" Description="System.Web.AspNetHostingPermission, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/&gt;
+                        &lt;SecurityClass Name="DnsPermission" Description="System.Net.DnsPermission, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/&gt;
+                        &lt;SecurityClass Name="EnvironmentPermission" Description="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/&gt;
+                        &lt;SecurityClass Name="FileIOPermission" Description="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/&gt;
+                        &lt;SecurityClass Name="FirstMatchCodeGroup" Description="System.Security.Policy.FirstMatchCodeGroup, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/&gt;
+                        &lt;SecurityClass Name="IsolatedStorageFilePermission" Description="System.Security.Permissions.IsolatedStorageFilePermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/&gt;
+                        &lt;SecurityClass Name="NamedPermissionSet" Description="System.Security.NamedPermissionSet"/&gt;
+                        &lt;SecurityClass Name="PrintingPermission" Description="System.Drawing.Printing.PrintingPermission, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/&gt;
+                        &lt;SecurityClass Name="SecurityPermission" Description="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/&gt;
+                        &lt;SecurityClass Name="SmtpPermission" Description="System.Net.Mail.SmtpPermission, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/&gt;
+                        &lt;SecurityClass Name="SqlClientPermission" Description="System.Data.SqlClient.SqlClientPermission, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/&gt;
+                        &lt;SecurityClass Name="StrongNameMembershipCondition" Description="System.Security.Policy.StrongNameMembershipCondition, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/&gt;
+                        &lt;SecurityClass Name="UIPermission" Description="System.Security.Permissions.UIPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/&gt;
+                        &lt;SecurityClass Name="UnionCodeGroup" Description="System.Security.Policy.UnionCodeGroup, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/&gt;
+                        &lt;SecurityClass Name="UrlMembershipCondition" Description="System.Security.Policy.UrlMembershipCondition, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/&gt;
+                        &lt;SecurityClass Name="WebPermission" Description="System.Net.WebPermission, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/&gt;
+                        &lt;SecurityClass Name="ZoneMembershipCondition" Description="System.Security.Policy.ZoneMembershipCondition, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/&gt;
+                    &lt;/SecurityClasses&gt;
+                    &lt;NamedPermissionSets&gt;
+                        &lt;PermissionSet
+                                class="NamedPermissionSet"
+                                version="1"
+                                Unrestricted="true"
+                                Name="FullTrust"
+                                Description="Allows full access to all resources"
+                        /&gt;
+                        &lt;PermissionSet
+                                class="NamedPermissionSet"
+                                version="1"
+                                Name="Nothing"
+                                Description="Denies all resources, including the right to execute"
+                        /&gt;
+                        &lt;PermissionSet
+                                class="NamedPermissionSet"
+                                version="1"
+                                Name="ASP.Net"&gt;
+                            &lt;IPermission
+                                    class="AspNetHostingPermission"
+                                    version="1"
+                                    Level="Medium"
+                            /&gt;
+                            &lt;IPermission
+                                    class="DnsPermission"
+                                    version="1"
+                                    Unrestricted="true"
+                            /&gt;
+                            &lt;IPermission
+                                    class="EnvironmentPermission"
+                                    version="1"
+                                    Read="TEMP;TMP;USERNAME;OS;COMPUTERNAME"
+                            /&gt;
+                            &lt;IPermission
+                                    class="FileIOPermission"
+                                    version="1"
+                                    Read="$AppDir$"
+                                    Write="$AppDir$"
+                                    Append="$AppDir$"
+                                    PathDiscovery="$AppDir$"
+                            /&gt;
+                            &lt;IPermission
+                                    class="IsolatedStorageFilePermission"
+                                    version="1"
+                                    Allowed="AssemblyIsolationByUser"
+                                    UserQuota="9223372036854775807"
+                            /&gt;
+                            &lt;IPermission
+                                    class="PrintingPermission"
+                                    version="1"
+                                    Level="DefaultPrinting"
+                            /&gt;
+                            &lt;IPermission
+                                    class="SecurityPermission"
+                                    version="1"
+                                    Flags="Assertion, Execution, ControlThread, ControlPrincipal, RemotingConfiguration"
+                            /&gt;
+                            &lt;IPermission
+                                    class="SmtpPermission"
+                                    version="1"
+                                    Access="Connect"
+                            /&gt;
+                            &lt;IPermission
+                                    class="SqlClientPermission"
+                                    version="1"
+                                    Unrestricted="true"
+                            /&gt;
+                            &lt;IPermission
+                                    class="WebPermission"
+                                    version="1"&gt;
+                                &lt;ConnectAccess&gt;
+                                    &lt;URI uri="$OriginHost$"/&gt;
+                                &lt;/ConnectAccess&gt;
+                            &lt;/IPermission&gt;
+                        &lt;/PermissionSet&gt;
+                    &lt;/NamedPermissionSets&gt;
+                    &lt;CodeGroup
+                            class="FirstMatchCodeGroup"
+                            version="1"
+                            PermissionSetName="Nothing"&gt;
+                        &lt;IMembershipCondition
+                                class="AllMembershipCondition"
+                                version="1"
+                        /&gt;
+                        &lt;CodeGroup
+                                class="UnionCodeGroup"
+                                version="1"
+                                PermissionSetName="ASP.Net"&gt;
+                            &lt;IMembershipCondition
+                                    class="UrlMembershipCondition"
+                                    version="1"
+                                    Url="$AppDirUrl$/*"
+                            /&gt;
+                        &lt;/CodeGroup&gt;
+                        &lt;CodeGroup
+                                class="UnionCodeGroup"
+                                version="1"
+                                PermissionSetName="ASP.Net"&gt;
+                            &lt;IMembershipCondition
+                                    class="UrlMembershipCondition"
+                                    version="1"
+                                    Url="$CodeGen$/*"
+                            /&gt;
+                        &lt;/CodeGroup&gt;
+                        &lt;CodeGroup class="UnionCodeGroup" version="1" PermissionSetName="Nothing"&gt;
+                        	&lt;IMembershipCondition
+                                class="ZoneMembershipCondition"
+                                version="1"
+                                Zone="MyComputer" /&gt;
+                            &lt;CodeGroup
+                                    class="UnionCodeGroup"
+                                    version="1"
+                                    PermissionSetName="FullTrust"
+                                    Name="Microsoft_Strong_Name"
+                                    Description="This code group grants code signed with the Microsoft strong name full trust. "&gt;
+                                &lt;IMembershipCondition
+                                        class="StrongNameMembershipCondition"
+                                        version="1"
+                                        PublicKeyBlob="002400000480000094000000060200000024000052534131000400000100010007D1FA57C4AED9F0A32E84AA0FAEFD0DE9E8FD6AEC8F87FB03766C834C99921EB23BE79AD9D5DCC1DD9AD236132102900B723CF980957FC4E177108FC607774F29E8320E92EA05ECE4E821C0A5EFE8F1645C4C0C93C1AB99285D622CAA652C1DFAD63D745D6F2DE5F17E5EAF0FC4963D261C8A12436518206DC093344D5AD293"
+                                /&gt;
+                            &lt;/CodeGroup&gt;
+                            &lt;CodeGroup
+                                    class="UnionCodeGroup"
+                                    version="1"
+                                    PermissionSetName="FullTrust"
+                                    Name="Ecma_Strong_Name"
+                                    Description="This code group grants code signed with the ECMA strong name full trust. "&gt;
+                                &lt;IMembershipCondition
+                                        class="StrongNameMembershipCondition"
+                                        version="1"
+                                        PublicKeyBlob="00000000000000000400000000000000"
+                                /&gt;
+                            &lt;/CodeGroup&gt;
+                        &lt;/CodeGroup&gt;
+                    &lt;/CodeGroup&gt;
+                &lt;/PolicyLevel&gt;</value>
+  </data>
+</root>

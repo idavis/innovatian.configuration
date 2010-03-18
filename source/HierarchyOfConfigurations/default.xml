@@ -1,0 +1,14 @@
+﻿<Configuration>
+  <Section Name="Network">
+    <Key Name="Scheme" Value="http" />
+    <Key Name="Domain" Value="www.time.gov" />
+    <Key Name="Query" Value="Eastern/d/-5" />
+    <Key Name="Action" Value="timezone.cgi" />
+    <Key Name="Url" Value="${Scheme}://${Domain}/${Action}?${Query}" />
+  </Section>
+  <Section Name="Data">
+    <Key Name="Drive" Value="C:\" />
+    <Key Name="Folder" Value="." />
+    <Key Name="LogFile" Value="${Network|Scheme}.xml" />
+  </Section>
+</Configuration>

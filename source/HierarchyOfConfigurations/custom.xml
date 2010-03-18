@@ -1,0 +1,7 @@
+﻿<Configuration>
+  <Section Name="Network">
+    <Key Name="Scheme" Value="https" />
+    <Key Name="Query" Value="UTC/s/0/java" />
+    <Key Name="PollingInterval" Value="5000" />
+  </Section>
+</Configuration>
