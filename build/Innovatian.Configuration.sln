@@ -1,11 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{903AE30C-D0B0-4594-8B28-981B39C28376}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Innovatian.Configuration", "..\source\Innovatian.Configuration\Innovatian.Configuration.csproj", "{A1CFBF50-8ACC-4291-8028-77D315AD9443}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Innovatian.Configuration.Tests", "..\source\Innovatian.Configuration.Tests\Innovatian.Configuration.Tests.csproj", "{1F9BA31D-A78A-4F2C-9A62-495C8730800C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{903AE30C-D0B0-4594-8B28-981B39C28376}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HierarchyOfConfigurations", "..\source\HierarchyOfConfigurations\HierarchyOfConfigurations.csproj", "{5308CF9F-7E4C-4753-951C-EDE0A8D9700B}"
 EndProject

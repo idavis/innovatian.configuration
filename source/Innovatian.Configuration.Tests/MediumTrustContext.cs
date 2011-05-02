@@ -65,7 +65,6 @@ namespace Innovatian.Configuration.Tests
     internal class RegistryTestContext : MediumTrustContext
     {
         private const string KeyName = @"SOFTWARE\Microsoft\Windows\CurrentVersion\App Management";
-        private const string LocalMachineRoot = @"HKEY_LOCAL_MACHINE";
 
         [Fact]
         public void CanReadRegistryGivenKeyName()

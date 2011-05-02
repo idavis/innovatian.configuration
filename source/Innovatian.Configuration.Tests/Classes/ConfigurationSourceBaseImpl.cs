@@ -23,12 +23,12 @@ namespace Innovatian.Configuration.Tests.Classes
 
         #endregion
 
-        public IList<IConfigurationSource> ConfigurationSources
+        public new IList<IConfigurationSource> ConfigurationSources
         {
             get { return base.ConfigurationSources; }
         }
 
-        public void Clear()
+        public new void Clear()
         {
             base.Clear();
         }

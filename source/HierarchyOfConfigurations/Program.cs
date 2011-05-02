@@ -44,33 +44,8 @@ namespace HierarchyOfConfigurations
 
             WriteLines();
 
-            // Convert to encrypted ini file.
-            var protectedSource = new IniConfigurationSource();
-            protectedSource.Encrypt = true;
-            protectedSource.EncryptionKey = "{42C418A0-5612-45a8-9A64-A63E761E7ACF}";
-            ConvertTo( source, protectedSource, "encrypted ini", ".ini" );
-
-            WriteLines();
-
-            var encrypted = LoadProtectedIni( "{42C418A0-5612-45a8-9A64-A63E761E7ACF}", "encrypted ini", ".ini" );
-            encrypted.Encrypt = false; // so we can see it.
-            ConvertTo( encrypted, new IniConfigurationSource(), "unencrypted", ".ini" );
-
             Console.WriteLine( "Press enter to exit." );
             Console.ReadLine();
-        }
-
-        private static IConfigurationSource LoadProtectedIni( string key, string message, string extension )
-        {
-            Console.WriteLine( "Loading {0}:", message );
-            var source = new IniConfigurationSource
-                         {
-                             Encrypt = true,
-                             EncryptionKey = key,
-                             FileName = Path.Combine( AppDomain.CurrentDomain.BaseDirectory, "composite" + extension )
-                         };
-            source.Reload();
-            return source;
         }
 
         private static void WriteSettingsToConsole( IConfigurationSource source )
