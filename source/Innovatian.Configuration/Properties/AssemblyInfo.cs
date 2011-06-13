@@ -18,7 +18,7 @@ using System.Security;
 [assembly : AssemblyConfiguration( "" )]
 [assembly : AssemblyCompany( "" )]
 [assembly : AssemblyProduct( "Innovatian.Configuration" )]
-[assembly : AssemblyCopyright( "Copyright © 2009-2010, Innovatian Software" )]
+[assembly : AssemblyCopyright( "Copyright © 2009-2011, Innovatian Software" )]
 [assembly : AssemblyTrademark( "" )]
 [assembly : AssemblyCulture( "" )]
 
@@ -33,7 +33,7 @@ using System.Security;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 
-[assembly : Guid( "a719622f-0795-441f-9ff2-c051b4eb0eff" )]
+[assembly : Guid( "44F07882-0BF0-4C35-A60A-F418101EB30C" )]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -46,6 +46,6 @@ using System.Security;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly : AssemblyVersion( "0.9.0.0" )]
-[assembly : AssemblyFileVersion( "0.9.0.0" )]
+[assembly : AssemblyVersion( "1.0.0.0" )]
+[assembly : AssemblyFileVersion( "1.0.0.0" )]
 [assembly : NeutralResourcesLanguage( "en-US" )]

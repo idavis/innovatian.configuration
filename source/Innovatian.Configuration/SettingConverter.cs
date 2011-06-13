@@ -123,8 +123,15 @@ namespace Innovatian.Configuration
                     }
                     else
                     {
-                        string message = string.Format( Text.Culture, Text.CannotRoundTripType0, value.GetType() );
-                        throw new InvalidOperationException( message );
+                        if (typeOfT == typeof(object))
+                        {
+                            stringValue = value.ToString();
+                        }
+                        else
+                        {
+                            string message = string.Format( Text.Culture, Text.CannotRoundTripType0, value.GetType() );
+                            throw new InvalidOperationException( message );
+                        }
                     }
                 }
             }
@@ -144,7 +151,7 @@ namespace Innovatian.Configuration
             int result;
             if ( Int32.TryParse( value, out result ) )
             {
-                return (T) (object) !( result == 0 );
+                return (T) (object) ( result != 0 );
             }
 
             // didn't use an int, pass off the the BooleanConverter. The
