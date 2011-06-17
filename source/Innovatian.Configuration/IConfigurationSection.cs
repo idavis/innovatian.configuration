@@ -45,6 +45,25 @@ namespace Innovatian.Configuration
         T Get<T>( string key );
 
         /// <summary>
+        /// Returns <c>true</c> if the value of the setting name <paramref name="key"/> 
+        /// exists and sets the <c>T</c> instance via the out parameter. If the key
+        /// was not found, <c>false</c> is returned and the out value is set to default(T).
+        /// </summary>
+        /// <typeparam name="T">
+        /// The type needed by the user.
+        /// </typeparam>
+        /// <param name="key">
+        /// The name of the setting.
+        /// </param>
+        /// <param name="value">
+        /// The value to set if the key exists.
+        /// </param>
+        /// <returns>returns <c>true</c> if the setting exists and sets the value as a <c>T</c> instance or
+        /// <c>false</c> if the key does not exist and sets the out value to default(T).
+        /// </returns>
+        bool TryGet<T>(string key, out T value);
+
+        /// <summary>
         /// Returns the value of the setting name <paramref name="key"/> as a
         /// <c>T</c> instance.
         /// </summary>
