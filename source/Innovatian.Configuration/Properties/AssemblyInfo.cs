@@ -28,7 +28,10 @@ using System.Security;
 
 [assembly : ComVisible( false )]
 [assembly : CLSCompliant( true )]
-[assembly : InternalsVisibleTo( "Innovatian.Configuration.Tests" )]
+[assembly :
+        InternalsVisibleTo(
+                "Innovatian.Configuration.Tests, PublicKey=0024000004800000940000000602000000240000525341310004000001000100cf4494226a44fc1e7d12458fce47f88af0aaf475b89a9ba8935218119c4b97441ed2ca82d76ba189738272fe6b2c277d3820a6817519ddbe6f098dd753ad8f4b09dae294b04c8c8f982beb40c450fda1ac7d7af578176e54d35d7f6ce934c085fe5242ea687bad749744fb2127d435dd02ff91b331c563767fbe20979a2a9196"
+                )]
 [assembly : AllowPartiallyTrustedCallers]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
@@ -46,6 +49,6 @@ using System.Security;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly : AssemblyVersion( "1.1.1" )]
-[assembly : AssemblyFileVersion( "1.1.1" )]
+[assembly : AssemblyVersion( "1.1.2" )]
+[assembly : AssemblyFileVersion( "1.1.2" )]
 [assembly : NeutralResourcesLanguage( "en-US" )]
