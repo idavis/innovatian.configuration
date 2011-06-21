@@ -32,6 +32,17 @@ namespace Innovatian.Configuration.Tests
         }
 
         [Fact]
+        public void CanReadAddedValueWithTryGet()
+        {
+            var section = new ConfigurationSection( SectionName );
+            section.Set( Key, Value );
+            string value;
+            bool found = section.TryGet( "key", out value );
+            Assert.True( found );
+            Assert.Equal( Value, value );
+        }
+
+        [Fact]
         public void CanRemoveAddedValue()
         {
             var section = new ConfigurationSection( SectionName );
@@ -164,6 +175,37 @@ namespace Innovatian.Configuration.Tests
             Assert.Equal( default( bool ), boolValue );
 
             var dummySection = section.Get<ConfigurationSection>( Key );
+            Assert.Equal( default( ConfigurationSection ), dummySection );
+        }
+
+        [Fact]
+        public void UsingTryGetForNonExistingItemReturnsFalseAndSetsTheOutParamToTheDefaultForType()
+        {
+            var section = new ConfigurationSection( SectionName );
+
+            OptionsEnum optionsEnum;
+            bool found = section.TryGet( Key, out optionsEnum );
+            Assert.False( found );
+            Assert.Equal( default( OptionsEnum ), optionsEnum );
+
+            OSEnum osEnum;
+            found = section.TryGet( Key, out osEnum );
+            Assert.False( found );
+            Assert.Equal( default( OSEnum ), osEnum );
+
+            string stringValue;
+            found = section.TryGet( Key, out stringValue );
+            Assert.False( found );
+            Assert.Equal( default( string ), stringValue );
+
+            bool boolValue;
+            found = section.TryGet( Key, out boolValue );
+            Assert.False( found );
+            Assert.Equal( default( bool ), boolValue );
+
+            ConfigurationSection dummySection;
+            found = section.TryGet( Key, out dummySection );
+            Assert.False( found );
             Assert.Equal( default( ConfigurationSection ), dummySection );
         }
 
