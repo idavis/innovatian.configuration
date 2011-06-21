@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Innovatian.Configuration</id>
-    <version>1.0</version>
+    <version>1.1.1</version>
     <title />
     <authors>Ian Davis</authors>
     <owners />
@@ -17,8 +17,8 @@ Supports merging of heterogeneous sources into a single composite settings store
     <summary>Configuration library supporting INI, XML, Isolated Storage, Registry, command line, .NET config files as storage mechanisms.</summary>
   </metadata>
   <files>
-    <file src="lib\Innovatian.Configuration.dll" target="lib\Innovatian.Configuration.dll" />
-    <file src="lib\Innovatian.Configuration.pdb" target="lib\Innovatian.Configuration.pdb" />
-    <file src="lib\Innovatian.Configuration.xml" target="lib\Innovatian.Configuration.xml" />
+    <file src="bin\Innovatian.Configuration.dll" target="lib\Innovatian.Configuration.dll" />
+    <file src="bin\Innovatian.Configuration.pdb" target="lib\Innovatian.Configuration.pdb" />
+    <file src="bin\Innovatian.Configuration.xml" target="lib\Innovatian.Configuration.xml" />
   </files>
 </package>
