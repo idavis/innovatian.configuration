@@ -18,7 +18,7 @@ using System.Security;
 [assembly : AssemblyConfiguration( "" )]
 [assembly : AssemblyCompany( "" )]
 [assembly : AssemblyProduct( "Innovatian.Configuration" )]
-[assembly : AssemblyCopyright( "Copyright © 2009-2011, Innovatian Software" )]
+[assembly : AssemblyCopyright( "Copyright © 2009-2012, Innovatian Software" )]
 [assembly : AssemblyTrademark( "" )]
 [assembly : AssemblyCulture( "" )]
 

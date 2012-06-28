@@ -1,6 +1,6 @@
 ﻿<Configuration>
   <Section Name="Network">
     <Key Name="Query" Value="Pacific/d/-8" />
-    <Key Name="LastUpdate" Value ="03/24/2009" />
+    <Key Name="LastUpdate" Value="03/24/2009" />
   </Section>
 </Configuration>
