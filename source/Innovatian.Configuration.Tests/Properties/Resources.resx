@@ -127,6 +127,10 @@
     <value>[kasdk]
 []</value>
   </data>
+  <data name="IniTestCaseMultipleEqualSigns" xml:space="preserve">
+    <value>[aSection]
+a_key=Some text with = in it</value>
+  </data>
   <data name="IniTestCases" xml:space="preserve">
     <value>; last modified 1 April 2001 by John Doe
 [owner]
@@ -146,8 +150,7 @@ MyEmptyValue=
 [Completely Empty Section]
 [  NonEmptyAfterCompletelyEmpty   ]
 ; adding = after comment;=
-   mykey    =  myval  akdk     ;
-multi= myvalue=do</value>
+   mykey    =  myval  akdk     ;</value>
   </data>
   <data name="MediumTrustConfig" xml:space="preserve">
     <value>                &lt;PolicyLevel version="1"&gt;
