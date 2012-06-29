@@ -242,12 +242,10 @@ namespace Innovatian.Configuration
                 }
 
                 string[] pair = workingLine.Split( new[] {Delimiter}, StringSplitOptions.None );
-                if ( pair.Length != 2 )
-                {
-                    continue;
-                }
                 string key = pair[0].Trim();
-                string value = pair[1].Trim();
+                string value = (pair.Length == 2
+                                ? pair[1].Trim()
+                                : String.Join(Delimiter, pair.Skip(1).ToArray()));
                 if ( string.IsNullOrEmpty( key ) )
                 {
                     continue;

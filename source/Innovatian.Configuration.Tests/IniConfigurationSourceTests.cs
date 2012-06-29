@@ -51,6 +51,16 @@ namespace Innovatian.Configuration.Tests
         }
 
         [Fact]
+        public void CanGetValueContainingEqualSign()
+        {
+            var source = new IniConfigurationSource(Resources.IniTestCaseMultipleEqualSigns);
+
+            var actualValue = source.Sections["aSection"].Get<string>("a_key");
+
+            Assert.Equal("Some text with = in it", actualValue);
+        }
+
+        [Fact]
         public void ThrowsOnEmptySectionNames()
         {
             Assert.Throws<InvalidOperationException>(

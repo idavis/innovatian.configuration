@@ -88,6 +88,15 @@ namespace Innovatian.Configuration.Tests.Properties {
             }
         }
         
+        ///   Sucht eine lokalisierte Zeichenfolge, die [aSection]
+        ///a_key=Some text with = in it ähnelt.
+        /// </summary>
+        internal static string IniTestCaseMultipleEqualSigns {
+            get {
+                return ResourceManager.GetString("IniTestCaseMultipleEqualSigns", resourceCulture);
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to ; last modified 1 April 2001 by John Doe
         ///[owner]
@@ -107,8 +116,7 @@ namespace Innovatian.Configuration.Tests.Properties {
         ///[Completely Empty Section]
         ///[  NonEmptyAfterCompletelyEmpty   ]
         ///; adding = after comment;=
-        ///   mykey    =  myval  akdk     ;
-        ///multi= myvalue=do.
+        ///   mykey    =  myval  akdk     ; ähnelt.
         /// </summary>
         internal static string IniTestCases {
             get {
