@@ -29,6 +29,7 @@ namespace Innovatian.Configuration
     {
         private readonly string _comment = ";";
         private readonly string _delimiter = "=";
+        private readonly bool _singleLineComments = false;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="IniConfigurationSource"/> class.
@@ -47,8 +48,8 @@ namespace Innovatian.Configuration
         /// Initializes a new instance of the <see cref="IniConfigurationSource"/> class.
         /// </summary>
         /// <param name="data">The data.</param>
-        /// <param name="comment"></param>
-        /// <param name="delimiter"></param>
+        /// <param name="comment">The string denoting the start of a comment</param>
+        /// <param name="delimiter">The string denoting the key/value delimiter</param>
         public IniConfigurationSource( string data, string comment, string delimiter )
         {
             if ( string.IsNullOrEmpty( data ) )
@@ -79,6 +80,103 @@ namespace Innovatian.Configuration
         }
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="IniConfigurationSource"/> class.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <param name="comment">The string denoting the start of a comment</param>
+        /// <param name="delimiter">The string denoting the key/value delimiter</param>
+        /// <param name="singleLineComments">Whether comments must appear on a line of their own</param>
+        public IniConfigurationSource( string data, string comment, string delimiter, bool singleLineComments )
+        {
+            if (string.IsNullOrEmpty(data)) { throw new ArgumentNullException("data"); }
+            if (string.IsNullOrEmpty(comment)) { throw new ArgumentNullException("comment"); }
+            if (string.IsNullOrEmpty(delimiter)) { throw new ArgumentNullException("delimiter"); }
+
+            _comment = comment;
+            _delimiter = delimiter;
+            _singleLineComments = singleLineComments;
+
+            Parse( data );
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IniConfigurationSource"/> class.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <param name="singleLineComments">Whether comments must appear on a line of their own</param>
+        public IniConfigurationSource(string data, bool singleLineComments)
+        {
+            if (string.IsNullOrEmpty(data)) { throw new ArgumentNullException("data"); }
+
+            _singleLineComments = singleLineComments;
+            Parse(data);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IniConfigurationSource"/> class.
+        /// </summary>
+        /// <param name="fileInfo">The file to load.</param>
+        public IniConfigurationSource(FileInfo fileInfo)
+        {
+            if (fileInfo == null) { throw new ArgumentNullException("fileInfo"); }
+
+            Parse(ReadFile(fileInfo.FullName));
+        }
+
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IniConfigurationSource"/> class.
+        /// </summary>
+        /// <param name="fileInfo">The file to load.</param>
+        /// <param name="singleLineComments">Whether comments must appear on a line of their own</param>
+        public IniConfigurationSource(FileInfo fileInfo, bool singleLineComments)
+        {
+            if (fileInfo == null) { throw new ArgumentNullException("fileInfo"); }
+
+            _singleLineComments = singleLineComments;
+
+            Parse(ReadFile(fileInfo.FullName));
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IniConfigurationSource"/> class.
+        /// </summary>
+        /// <param name="fileInfo">The file to load.</param>
+        /// <param name="comment">The string denoting the start of a comment</param>
+        /// <param name="delimiter">The string denoting the key/value delimiter</param>
+        public IniConfigurationSource(FileInfo fileInfo, string comment, string delimiter)
+        {
+            if (fileInfo == null) { throw new ArgumentNullException("fileInfo"); }
+            if (string.IsNullOrEmpty(comment)) { throw new ArgumentNullException("comment"); }
+            if (string.IsNullOrEmpty(delimiter)) { throw new ArgumentNullException("delimiter"); }
+
+            _comment = comment;
+            _delimiter = delimiter;
+
+            Parse(ReadFile(fileInfo.FullName));
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IniConfigurationSource"/> class.
+        /// </summary>
+        /// <param name="fileInfo">The file to load.</param>
+        /// <param name="comment">The string denoting the start of a comment</param>
+        /// <param name="delimiter">The string denoting the key/value delimiter</param>
+        /// <param name="singleLineComments">Whether comments must appear on a line of their own</param>
+        public IniConfigurationSource(FileInfo fileInfo, string comment, string delimiter, bool singleLineComments)
+        {
+            if (fileInfo == null) { throw new ArgumentNullException("fileInfo"); }
+            if (string.IsNullOrEmpty(comment)) { throw new ArgumentNullException("comment"); }
+            if (string.IsNullOrEmpty(delimiter)) { throw new ArgumentNullException("delimiter"); }
+
+            _comment = comment;
+            _delimiter = delimiter;
+            _singleLineComments = singleLineComments;
+
+            Parse(ReadFile(fileInfo.FullName));
+        }
+
+        /// <summary>
         /// Gets the comment string for the ini file.
         /// </summary>
         /// <value>The comment.</value>
@@ -94,6 +192,15 @@ namespace Innovatian.Configuration
         protected virtual string Delimiter
         {
             get { return _delimiter; }
+        }
+
+        /// <summary>
+        /// Gets whether comments must appear on a line of their own in the ini file.
+        /// </summary>
+        /// <value>The delimiter.</value>
+        protected virtual bool SingleLineComments
+        {
+            get { return _singleLineComments; }
         }
 
         /// <summary>
@@ -114,6 +221,11 @@ namespace Innovatian.Configuration
         /// <param name="fileName">The name of the file to load into this instance.</param>
         protected override void Load( string fileName )
         {
+            Parse(ReadFile(fileName));
+        }
+
+        private string ReadFile(string fileName)
+        {
             if ( string.IsNullOrEmpty( fileName ) )
             {
                 throw new ArgumentNullException( "fileName" );
@@ -124,8 +236,7 @@ namespace Innovatian.Configuration
             {
                 using ( var textFile = new StreamReader( fileStream, DefaultEncoding ) )
                 {
-                    var data = textFile.ReadToEnd();
-                    Parse( data );
+                    return textFile.ReadToEnd();
                 }
             }
         }
@@ -225,7 +336,10 @@ namespace Innovatian.Configuration
             foreach ( string line in lines )
             {
                 string workingLine = line;
-                if ( line.Contains( Comment ) )
+
+                if ( line.TrimStart().StartsWith( Comment ) ) continue;
+
+                if (!SingleLineComments && line.Contains( Comment ) )
                 {
                     workingLine = line.Substring( 0, line.IndexOf( Comment, StringComparison.OrdinalIgnoreCase ) );
                 }
