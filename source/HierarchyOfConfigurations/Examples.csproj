@@ -8,8 +8,8 @@
     <ProjectGuid>{5308CF9F-7E4C-4753-951C-EDE0A8D9700B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HierarchyOfConfigurations</RootNamespace>
-    <AssemblyName>HierarchyOfConfigurations</AssemblyName>
+    <RootNamespace>Innovatian.Configuration.Samples</RootNamespace>
+    <AssemblyName>Innovatian.Configuration.Samples</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -62,8 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HierarchyOfConfigurations\Sample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CustomSettings\NetworkSettings.cs" />
+    <Compile Include="CustomSettings\Sample.cs" />
+    <Compile Include="CustomSettings\SettingsFileBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Innovatian.Configuration\Innovatian.Configuration.csproj">
@@ -72,6 +76,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="default.settings.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="custom.ini">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

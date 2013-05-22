@@ -11,6 +11,7 @@
 *.ps1      eol=crlf
 *.txt      eol=crlf
 *.xml      eol=crlf
+*.resx     eol=crlf
 
 .gitattributes      merge=text
 
