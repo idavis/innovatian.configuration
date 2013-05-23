@@ -8,7 +8,9 @@ This project tries to accomplish what Nini does but implemented using newer tech
 To compile Lucid.Configuration, you can install the latest Nemerle Nightly for VS2012, or use the command line.
 
 Download all dependencies:
-.\build.ps1 -bootstrap
+
+`.\build.ps1 -bootstrap`
 
 Compile:
-.\build.ps1
+
+`.\build.ps1`
