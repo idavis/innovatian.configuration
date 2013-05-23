@@ -24,14 +24,19 @@ properties {
   $msbuild.logger = "FileLogger,Microsoft.Build.Engine"
   $msbuild.platform = "Any CPU"
   
-  Write-Output "Loading Nemerle properties"
-  $NemerleVersion = "Net-3.5"
-  $TargetFrameworkVersion = "3.5"
+  $NemerleVersion = "Net-4.5"
+  $TargetFrameworkVersion = "v4.5"
 }
 
 task default -depends build, test
 
-task build -depends build-35
+task build -depends build-45 {
+  #$framework = $psake.context.peek().config.framework
+  #$versionPart = $framework.Substring(0, 3)
+  #$NemerleVersion = "Net-{0}" -f $versionPart
+  #$TargetFrameworkVersion = "v{0}" -f $versionPart
+  #Invoke-MsBuild
+}
 
 task build-35 {
   $NemerleVersion = "Net-3.5"
@@ -58,11 +63,11 @@ function Invoke-MsBuild {
   $command = "msbuild /property:NemerleVersion=$NemerleVersion " +
                  "/property:TargetFrameworkVersion=$TargetFrameworkVersion " +
 				 "/m:$($msbuild.max_cpu_count) " +
-				 "/p:BuildInParralel=$msbuild.build_in_parralel " +
+				 "/p:BuildInParralel=$($msbuild.build_in_parralel) " +
 				 "/logger:$($msbuild.logger);logfile=`"$($msbuild.logfilepath)\$($msbuild.logfilename)`" " +
 				 "/p:Configuration=$($build.configuration) " +
 				 "/p:Platform=$($msbuild.platform) " +
-				 "/p:OutDir=`"$($build.dir)`" " +
+				 "/p:OutDir=`"$($build.dir)\`" " +
 				 "`"$($solution.file)`""
 				 
   $message = "Error executing command: {0}"
@@ -74,7 +79,7 @@ function Invoke-MsBuild {
 				 /logger:"$($msbuild.logger);logfile=`"$($msbuild.logfilepath)\$($msbuild.logfilename)`"" `
 				 /p:Configuration="$($build.configuration)" `
 				 /p:Platform="$($msbuild.platform)" `
-				 /p:OutDir="`"$($build.dir)`"" `
+				 /p:OutDir="`"$($build.dir)\\`"" `
 				 "`"$($solution.file)`"" } $errorMessage
 }
 
