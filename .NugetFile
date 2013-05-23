@@ -1,0 +1,7 @@
+install_to 'lib'
+
+new-group dev {
+  chew 'psake' '[4.2.0.1]'
+  chew 'nunit' '[2.6.2]'
+  chew 'nunit.runners' '[2.6.2]'
+}

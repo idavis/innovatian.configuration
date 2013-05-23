@@ -1,7 +1,7 @@
-Innovatian.Configuration is intended to be used in both open-source and commercial environments. To allow its use in as many
-situations as possible, Innovatian.Configuration is dual-licensed. You may choose to use Innovatian.Configuration under either the Apache License,
+Lucid.Configuration is intended to be used in both open-source and commercial environments. To allow its use in as many
+situations as possible, Lucid.Configuration is dual-licensed. You may choose to use Lucid.Configuration under either the Apache License,
 Version 2.0, or the Microsoft Public License (Ms-PL). These licenses are essentially identical, but you are
-encouraged to evaluate both to determine which best fits your intended use. Some components used by Innovatian.Configuration
+encouraged to evaluate both to determine which best fits your intended use. Some components used by Lucid.Configuration
 are licensed under different terms. You are encouraged to review the licenses for the individual components.
 
 -----

@@ -8,3 +8,5 @@ obj
 *.docstates
 *.nupkg
 *.ncrunch*
+TestResults*
+lib/

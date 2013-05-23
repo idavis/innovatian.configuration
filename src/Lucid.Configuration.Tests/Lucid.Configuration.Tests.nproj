@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{e5576576-ad61-4b48-a81b-c0b8f967dd41}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lucid.Configuration.Tests</RootNamespace>
+    <AssemblyName>Lucid.Configuration.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NoStdLib>true</NoStdLib>
+    <NemerleVersion>Net-4.5</NemerleVersion>
+    <NemerleBinPathRoot Condition=" '$(NemerleBinPathRoot)' == '' ">$(ProgramFiles)\Nemerle</NemerleBinPathRoot>
+    <!--<Nemerle Condition=" '$(Nemerle)' == '' ">$(NemerleBinPathRoot)\$(NemerleVersion)</Nemerle>-->
+    <Nemerle Condition=" '$(Nemerle)' == '' ">$(MSBuildProjectDirectory)\..\..\build\Nemerle-v1.1.1005.0\$(NemerleVersion)</Nemerle>
+    <Name>Lucid.Configuration</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="nunit.framework, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <Name>nunit.framework</Name>
+      <AssemblyName>nunit.framework.dll</AssemblyName>
+      <HintPath>..\..\lib\NUnit\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Nemerle">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(Nemerle)\Nemerle.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <MacroReference Include="Nemerle.Linq">
+      <HintPath>$(Nemerle)\Nemerle.Linq.dll</HintPath>
+    </MacroReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.n" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandLineConfigurationSource.cs">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="ConfigurationSectionTests.cs">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="ConfigurationSourceBaseTests.cs">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="DotNetConfigSourceTests.cs">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="IniConfigurationSourceTests.cs">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="IsoStorageConfigurationSourceTests.cs">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="MediumTrustContext.cs">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="RegistryConfigurationSourceTests.cs">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="SettingsConverterTests.cs">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="XmlConfigurationSourceTests.cs">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lucid.Configuration\Lucid.Configuration.nproj">
+      <Name>Lucid.Configuration</Name>
+      <Project>{218f02db-79b5-424e-937b-2623e8bb94b3}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\ConfigurationSourceBaseImpl.cs">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Classes\OptionsEnum.cs">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Classes\OSEnum.cs">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Classes\SectionGenerator.cs">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(Nemerle)\Nemerle.MSBuild.targets" />
+  <!--
+		To modify your build process, add your task inside one of the targets below and uncomment it. 
+		Other similar extension points exist, see Microsoft.Common.targets.
+
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

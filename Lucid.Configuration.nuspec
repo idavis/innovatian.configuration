@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Lucid.Configuration</id>
+    <version>2.0.0</version>
+    <title />
+    <authors>Ian Davis</authors>
+    <owners />
+    <licenseUrl>https://raw.github.com/idavis/Lucid.configuration/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/idavis/Lucid.configuration</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Configuration library supporting INI, XML, Isolated Storage, Registry, command line, .NET config files as storage mechanisms. 
+
+Values are returned strongly typed and advanced type conversions are applied automatically.
+
+Supports merging of heterogeneous sources into a single composite settings store with cross section value expansion capabilities.</description>
+    <summary>Configuration library supporting INI, XML, Isolated Storage, Registry, command line, .NET config files as storage mechanisms.</summary>
+  </metadata>
+  <files>
+    <file src="bin\Lucid.Configuration.dll" target="lib\Lucid.Configuration.dll" />
+    <file src="bin\Lucid.Configuration.pdb" target="lib\Lucid.Configuration.pdb" />
+    <file src="bin\Lucid.Configuration.xml" target="lib\Lucid.Configuration.xml" />
+  </files>
+</package>

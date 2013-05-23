@@ -12,6 +12,7 @@
 *.txt      eol=crlf
 *.xml      eol=crlf
 *.resx     eol=crlf
+.NugetFile eol=crlf
 
 .gitattributes      merge=text
 

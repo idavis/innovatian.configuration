@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{EDCC3B85-0BAD-11DB-BC1A-00112FDE8B61}") = "Lucid.Configuration", "src\Lucid.Configuration\Lucid.Configuration.nproj", "{218F02DB-79B5-424E-937B-2623E8BB94B3}"
+EndProject
+Project("{EDCC3B85-0BAD-11DB-BC1A-00112FDE8B61}") = "Lucid.Configuration.Tests", "src\Lucid.Configuration.Tests\Lucid.Configuration.Tests.nproj", "{E5576576-AD61-4B48-A81B-C0B8F967DD41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{218F02DB-79B5-424E-937B-2623E8BB94B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{218F02DB-79B5-424E-937B-2623E8BB94B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{218F02DB-79B5-424E-937B-2623E8BB94B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{218F02DB-79B5-424E-937B-2623E8BB94B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5576576-AD61-4B48-A81B-C0B8F967DD41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5576576-AD61-4B48-A81B-C0B8F967DD41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5576576-AD61-4B48-A81B-C0B8F967DD41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5576576-AD61-4B48-A81B-C0B8F967DD41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
