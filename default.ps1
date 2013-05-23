@@ -18,7 +18,7 @@ properties {
   Write-Output "Loading MSBuild properties"
   $msbuild = @{}
   $msbuild.logfilename = "MSBuildOutput.txt"
-  $msbuild.logfilepath = $build.dir
+  $msbuild.logfilepath = "$($build.dir)"
   $msbuild.max_cpu_count = [System.Environment]::ProcessorCount
   $msbuild.build_in_parralel = $true
   $msbuild.logger = "FileLogger,Microsoft.Build.Engine"
@@ -52,6 +52,9 @@ task build-45 {
 }
 
 function Invoke-MsBuild {
+  if(!(Test-Path "$($msbuild.logfilepath)")) {
+    New-Item -ItemType Directory -Path "$($msbuild.logfilepath)" | Out-Null
+  }
   $command = "msbuild /property:NemerleVersion=$NemerleVersion " +
                  "/property:TargetFrameworkVersion=$TargetFrameworkVersion " +
 				 "/m:$($msbuild.max_cpu_count) " +
